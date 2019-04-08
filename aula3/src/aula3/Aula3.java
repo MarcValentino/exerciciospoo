@@ -31,23 +31,33 @@ public class Aula3 {
                     idades[i] = temp1;
                     nomes[j] = nomes[i];
                     nomes[i] = temp2;
-                }else if(nomes[i].compareToIgnoreCase(nomes[j]) == 0){
-                    if(idades[i] > idades[j]){
+                }
+            }
+        }
+        System.out.println("Sort por nome: ");
+        for(int i = 0; i<10; i++){
+            System.out.println(nomes[i] + ", " + idades[i]);
+        }
+        System.out.println("");
+        
+        for(int i = 0; i<10;i++){
+            for(int j = i+1; j< 10;j++){
+                if(idades[i] > idades[j]){
                     int temp1 = idades[j]; String temp2 = nomes[j];
                     idades[j] = idades[i];
                     idades[i] = temp1;
                     nomes[j] = nomes[i];
-                    nomes[j] = temp2;
-                    }
+                    nomes[i] = temp2;
                 }
             }
         }
+        System.out.println("Sort por idade: ");
         for(int i = 0; i<10; i++){
             System.out.println(nomes[i] + ", " + idades[i]);
         }
         
     }
-        
+    
     
     public static void Calculadora(Scanner teclado){
         double memoria = 0;
