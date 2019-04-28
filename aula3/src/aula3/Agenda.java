@@ -13,34 +13,7 @@ public class Agenda {
     
     Agenda(Aluno[] gentes){
         this.pessoas = gentes;
-    }
-    
-    public void sortByIdade(){
-        System.out.println("SORT POR IDADE \n");
-        for(int i = 0; i<10;i++){
-            for(int j = i+1; j< 10;j++){
-                if(this.pessoas[i].idade > this.pessoas[j].idade){
-                    Aluno temp = this.pessoas[j];
-                    this.pessoas[j] = this.pessoas[i];
-                    this.pessoas[i] = temp;
-                }
-            }
-        }
-        printEstudantes();
-    }
-    
-    public void sortByNome(){
-        System.out.println("SORT POR NOME \n");
-        for(int i = 0; i<10;i++){
-            for(int j = i+1; j< 10;j++){
-                if(this.pessoas[i].nome.compareToIgnoreCase(this.pessoas[j].nome) > 0){
-                    Aluno temp = this.pessoas[j];
-                    this.pessoas[j] = this.pessoas[i];
-                    this.pessoas[i] = temp;
-                }
-            }
-        }
-        printEstudantes();
+        
     }
     
     public void printEstudantes(){

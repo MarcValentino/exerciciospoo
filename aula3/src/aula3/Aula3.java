@@ -20,11 +20,17 @@ public class Aula3 {
                  new Aluno("Aldo", 23), new Aluno("Fabio", 1), new Aluno("Natalia", 80), new Aluno("Maria", 42),
                 new Aluno("Carlos", 42), new Aluno("Luana", 67), new Aluno("Luana", 35), new Aluno("Orlando", 82)};
         Agenda minhaAgenda = new Agenda(pessoas);
+        
+        OrdenadorPorNome ordNome = new OrdenadorPorNome();
+        OrdenadorPorIdade ordIdade = new OrdenadorPorIdade();
+        
         minhaAgenda.printEstudantes();
         System.out.println("");
-        minhaAgenda.sortByNome();
+        ordIdade.ordena(minhaAgenda);
+        minhaAgenda.printEstudantes();
         System.out.println("");
-        minhaAgenda.sortByIdade();
+        ordNome.ordena(minhaAgenda);
+        minhaAgenda.printEstudantes();
         //Calculadora.run(new Scanner(System.in));
         
     }
